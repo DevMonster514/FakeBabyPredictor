@@ -9,6 +9,11 @@ def predict_child_gender(mother_dob, baby_dob):
        age -= 1
    # Odd-even rule
    return "Girl" if age % 2 == 0 else "Boy"
+st.set_page_config(
+    page_title="Lemme Guess Your Gender 👶",  # Browser tab title
+    page_icon="🔮",                           # Favicon (here a crystal ball emoji)
+    layout="centered"
+)
 st.title("Guess Your Gender")
 mother_dob = st.date_input("Mother's Date of Birth",min_value=date(1800,1,1),max_value="today")
 baby_dob = st.date_input("Your Date of Birth",min_value=date(1800,1,1),max_value=date(2030,1,1))
